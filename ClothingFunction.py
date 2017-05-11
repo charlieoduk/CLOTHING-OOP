@@ -19,6 +19,7 @@ class Tees(Clothes):
             return "Invalid sale"
         Clothes.sale(self, pieces)
         print('You sold {} Tee(s) and you have {} left in stock'.format(pieces, self.stock))
+        return self.stock
 
 class Polos(Clothes):
     def __init__(self):
@@ -32,9 +33,4 @@ class Polos(Clothes):
             return "Invalid sale"
         Clothes.sale(self, pieces)
         print('You sold {} polo(s) and you have {} left in stock'.format(pieces,self.stock))
-
-
-print(issubclass(Polos,Clothes ))
-
-
-
+        return self.stock
